@@ -1,51 +1,64 @@
+cat <<EOF > index.html
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IQPanda Tecnovador | Estrategia Digital</title>
+    <title>IQPanda Tecnovador | Agencia de Inteligencia Autónoma</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;700&family=Fira+Code:wght@300&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #050505; font-family: 'Space Grotesk', sans-serif; color: #fff; overflow-x: hidden; }
-        .hero-glow { background: radial-gradient(circle, rgba(0,255,204,0.15) 0%, rgba(0,0,0,0) 70%); }
-        .card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); transition: 0.3s; }
-        .card:hover { border-color: #00ffcc; box-shadow: 0 0 20px rgba(0,255,204,0.2); }
+        :root { --neon: #00ffcc; }
+        body { background-color: #020202; font-family: 'Space Grotesk', sans-serif; color: #fff; margin: 0; overflow-x: hidden; }
+        .code-font { font-family: 'Fira Code', monospace; }
+        .hero-bg { 
+            position: relative;
+            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.95)), 
+            url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop'); 
+            background-size: cover; background-position: center;
+            min-height: 100vh;
+        }
+        .glow-button { border: 1px solid var(--neon); box-shadow: 0 0 15px rgba(0,255,204,0.3); transition: 0.4s; }
+        .glow-button:hover { background: var(--neon); color: #000; box-shadow: 0 0 30px var(--neon); cursor: pointer; }
+        .card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); backdrop-filter: blur(10px); }
+        .card:hover { border-color: var(--neon); transform: translateY(-5px); }
     </style>
 </head>
-<body class="hero-glow min-h-screen">
-    <nav class="p-6 flex justify-between border-b border-white/10">
-        <span class="font-bold tracking-tighter text-2xl">IQ<span class="text-[#00ffcc]">PANDA</span></span>
-        <div class="text-xs text-gray-500 uppercase tracking-widest pt-2">San Vicente, Nayarit // Node_01</div>
-    </nav>
+<body class="hero-bg">
+    <div class="max-w-6xl mx-auto px-6 py-12">
+        <header class="flex justify-between items-center mb-24">
+            <div class="text-2xl font-bold tracking-tighter uppercase">IQ<span class="text-[--neon]">Panda</span></div>
+            <div class="code-font text-[10px] text-[--neon] opacity-70">SAN VICENTE, NAYARIT // NODE_01</div>
+        </header>
 
-    <main class="max-w-6xl mx-auto px-6 py-20">
-        <section class="mb-32">
-            <h1 class="text-7xl md:text-9xl font-bold leading-none mb-6">TECNO<br><span class="text-[#00ffcc]">VADOR</span></h1>
-            <p class="text-xl text-gray-400 max-w-2xl">Transformamos negocios locales en entidades digitales de alto rendimiento mediante IA, visión artificial y automatización de última generación.</p>
+        <section class="max-w-4xl">
+            <h2 class="code-font text-[--neon] mb-4 text-lg">// INICIANDO PROTOCOLO DE VALOR</h2>
+            <h1 class="text-6xl md:text-9xl font-bold mb-8 leading-tight tracking-tighter">TECNO<br><span class="text-[--neon]">VADOR</span></h1>
+            <p class="text-xl text-gray-400 mb-12 max-w-xl border-l-2 border-[--neon] pl-6">
+                Ingeniería disruptiva para la nueva era. Especialistas en <b>Visión Artificial</b>, <b>Agentes de Valor</b> y automatización de procesos B2B.
+            </p>
+            
+            <div class="flex gap-4">
+                <a href="https://wa.me/521XXXXXXXXXX" class="glow-button px-10 py-4 font-bold uppercase tracking-widest text-sm inline-block">Desplegar Proyecto</a>
+            </div>
         </section>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="card p-8">
-                <div class="text-[#00ffcc] mb-4 text-3xl font-bold">01</div>
-                <h3 class="text-xl font-bold mb-2">Visión Artificial</h3>
-                <p class="text-gray-500">Sistemas de inventario en tiempo real para logística y retail.</p>
+        <div class="mt-32 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="card p-8 transition-all">
+                <h3 class="text-[--neon] code-font mb-4 text-sm font-bold">[ PROYECTO: VISION_PANADERÍA ]</h3>
+                <p class="text-gray-400 text-sm">Sistema de auditoría de inventarios mediante redes neuronales y visión artificial para logística de panificación.</p>
             </div>
-            <div class="card p-8">
-                <div class="text-[#00ffcc] mb-4 text-3xl font-bold">02</div>
-                <h3 class="text-xl font-bold mb-2">Agentes de Valor</h3>
-                <p class="text-gray-500">Automatización de CRM y flujos de trabajo inteligentes.</p>
-            </div>
-            <div class="card p-8">
-                <div class="text-[#00ffcc] mb-4 text-3xl font-bold">03</div>
-                <h3 class="text-xl font-bold mb-2">Arquitectura Data</h3>
-                <p class="text-gray-500">Bases de datos PostgreSQL robustas y seguras.</p>
+            <div class="card p-8 transition-all">
+                <h3 class="text-[--neon] code-font mb-4 text-sm font-bold">[ PROYECTO: CRM_FRUTERÍA_LITE ]</h3>
+                <p class="text-gray-400 text-sm">Gestión automatizada de mermas y POS inteligente optimizado para micro-negocios locales.</p>
             </div>
         </div>
-
-        <footer class="mt-40 border-t border-white/10 pt-10 text-center">
-            <a href="https://wa.me/TU_NUMERO_AQUI" class="text-3xl font-bold hover:text-[#00ffcc] transition uppercase">¿Iniciamos la Secuencia?</a>
-        </footer>
-    </main>
+    </div>
 </body>
 </html>
+EOF
+
+# Subimos la versión definitiva
+git add .
+git commit -m "Dark mode brutal activado"
+git push origin main
